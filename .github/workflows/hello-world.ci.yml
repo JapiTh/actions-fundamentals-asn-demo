@@ -23,20 +23,20 @@ jobs:
         env:
           TIME: ${{ steps.hello-action.outputs.time }}
 
-#  composite-bash:
-#    runs-on: ubuntu-26.04
-#    steps:
-#      - uses: actions/checkout@v7.0.1
-#        with:
-#          persist-credentials: false
-#      - id: hello-action
-#        uses: $/hello-world-composite-bash-action
-#        with:
-#          who-to-greet: '@jessehouwing'
-#      - run: echo "The time was $TIME when the action said hello"
-#        env:
-#          TIME: ${{ steps.hello-action.outputs.time }}
-#
+  composite-bash:
+    runs-on: ubuntu-26.04
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - id: hello-action
+        uses: $/hello-world-composite-bash-action
+        with:
+          who-to-greet: '@jessehouwing'
+      - run: echo "The time was $TIME when the action said hello"
+        env:
+          TIME: ${{ steps.hello-action.outputs.time }}
+
 #  composite-pwsh:
 #    strategy:
 #      matrix:
