@@ -32,7 +32,7 @@ jobs:
       - id: hello-action
         uses: $/hello-world-composite-bash-action
         with:
-          who-to-greet: '@jessehouwing'
+          who-to-greet: '@japith'
       - run: echo "The time was $TIME when the action said hello"
         env:
           TIME: ${{ steps.hello-action.outputs.time }}
